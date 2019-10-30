@@ -5,8 +5,8 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('http://fonts.googleapis.com/css?family=Quicksand:300,400,700');
-@import url('http://fonts.googleapis.com/css?family=Righteous&amp;subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Righteous&amp;subset=latin,latin-ext');
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
@@ -1384,7 +1384,7 @@
 		opacity: 1;
 		padding-top: 3em;
 
-		h1{
+		h1, h2{
 			font-family: 'Righteous',helvetica,sans-serif;
 		}
 

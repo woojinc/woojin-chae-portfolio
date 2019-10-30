@@ -1,6 +1,6 @@
 @import url(fontawesome-all.min.css);
-@import url("http://fonts.googleapis.com/css?family=Quicksand:300,400,700");
-@import url("http://fonts.googleapis.com/css?family=Righteous&amp;subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Righteous&amp;subset=latin,latin-ext");
 /*
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
@@ -1988,7 +1988,7 @@ button,
   transition: opacity 0.5s ease;
   opacity: 1;
   padding-top: 3em; }
-  #page-wrapper h1 {
+  #page-wrapper h1, #page-wrapper h2 {
     font-family: 'Righteous',helvetica,sans-serif; }
   #page-wrapper:before {
     background: rgba(0, 0, 0, 0);
