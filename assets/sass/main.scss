@@ -5,7 +5,9 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+@import url('http://fonts.googleapis.com/css?family=Quicksand:300,400,700');
+@import url('http://fonts.googleapis.com/css?family=Righteous&amp;subset=latin,latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
 	Spectral by HTML5 UP
@@ -440,7 +442,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -608,6 +610,14 @@
 		&.style3 {
 			color: _palette(accent4, bg);
 		}
+
+	}
+
+	.icons > i {
+		font-size: 6em;
+		margin: 50px 20px;
+		line-height: 2em;
+		// margin: 20px;
 	}
 
 /* Image */
@@ -1196,7 +1206,7 @@
 			}
 
 			input[type="checkbox"],
-			input[type="radio"], {
+			input[type="radio"] {
 				& + label {
 					color: _palette($p, fg);
 
@@ -1373,6 +1383,10 @@
 		@include vendor('transition', 'opacity #{_duration(menu)} ease');
 		opacity: 1;
 		padding-top: 3em;
+
+		h1{
+			font-family: 'Righteous',helvetica,sans-serif;
+		}
 
 		&:before {
 			background: rgba(0,0,0,0);
@@ -1588,6 +1602,17 @@
 		position: relative;
 		text-align: center;
 
+		// Make h1 bigger only inside banner
+		h1 {
+			font-size: 1.5em;
+			margin-bottom: 28px;
+			// text-align: left;
+		}
+
+		#subtitle{
+
+		}
+
 		h2 {
 			@include vendor('transform', 'scale(1)');
 			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
@@ -1631,7 +1656,7 @@
 
 		.more {
 			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
-			@include vendor('transition-delay', '3.5s');
+			@include vendor('transition-delay', '1.6s');
 			@include vendor('transform', 'translateY(0)');
 			border: none;
 			bottom: 0;
@@ -1669,7 +1694,7 @@
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.25s');
+			@include vendor('transition-delay', '0.6s');
 			content: '';
 			background: _palette(bg);
 			display: block;
@@ -1774,7 +1799,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/pic02.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1899,7 +1924,7 @@
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/pic02.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1920,7 +1945,7 @@
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/pic02.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
