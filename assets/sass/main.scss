@@ -318,6 +318,7 @@
 			text-align: center;
 		}
 	}
+	
 
 	header {
 		p {
@@ -369,6 +370,27 @@
 			br {
 				display: none;
 			}
+		}
+		
+		.header-name::after{
+			position: absolute;
+			top: 0;
+			right: -0.8em;
+			content:"_";
+			-webkit-animation: blink 1s step-end infinite;
+  			animation: blink 1s step-end infinite;
+		}
+
+		@-webkit-keyframes blink {
+			0% { opacity: 1.0; }
+			50% { opacity: 0.0; }
+			100% { opacity: 1.0; }
+		}
+
+		@keyframes blink {
+			0% { opacity: 1.0; }
+			50% { opacity: 0.0; }
+			100% { opacity: 1.0; }
 		}
 	}
 
@@ -1954,5 +1976,153 @@
 			#footer {
 				background-color: darken(_palette(bg), 8);
 			}
+		}
+	}
+
+	#easter-egg-2 {
+		position: absolute;
+		font-size: 0.4em;
+		opacity: 50%;
+		bottom: 0;
+		right: 3em;
+	}
+
+	#about-me-header {
+		text-align: left;
+		margin-left: 20px;
+	}
+
+	#intro {
+		padding-top: 3em;
+		.intro-header {
+			margin-bottom: 0;
+		}
+	}
+
+	.about-me {
+		display: flex;
+		flex-direction: row;
+		max-width: 870px;
+		margin: 0 auto;
+
+		.profile-photo > img {
+			// border-radius: 5% 0 5% 0;
+			max-height: 500px;
+			margin: 40px;
+			// margin-right: 40px;
+
+			@include breakpoint('<=medium') {
+				margin: 0 auto;
+				width: 100%;
+				max-width: 750px;
+				content:url("../../images/woojin_tree_smile.jpg")
+			}
+			
+		}
+		@include breakpoint('<=xlarge') {
+			
+			font-size: 13pt;
+		}
+
+		@include breakpoint('<=large') {
+			
+			font-size: 12pt;
+		}
+
+		@include breakpoint('<=medium') {
+			max-width: 820px;
+			flex-direction: column;
+		}
+
+		@include breakpoint('<=small') {
+
+			font-size: 11pt;
+			letter-spacing: _size(letter-spacing) * 0.5;
+		}
+	}
+
+	.about-me-intro {
+		display: flex;
+		flex-direction: row;
+		// height: auto;
+		.content {
+			margin-top: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			// justify-content: center;
+
+			h3, p {
+				text-align: left;
+				line-height: 2em;
+				margin: 20px;
+				margin-bottom: 20px;
+			}
+
+			@include breakpoint('<=medium') {
+				margin: 0 auto;
+				max-width: 640px;
+				margin-top: 10px;
+				box-sizing: border-box;
+			}
+
+			// p{
+			// 	text-align: justify;
+			// }
+		}
+
+	}
+
+	// .about-me > .content {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: flex-start;
+	// 	justify-content: flex-start;
+
+	// 	h3, p {
+	// 		text-align: left;
+	// 		line-height: 2em;
+	// 		margin: 20px;
+	// 	}
+	// }
+	// .about-me p {
+	// 	text-align: left;
+	// 	padding: 20px;
+	// }
+
+	// .profile-photo > img {
+		// background-image: url('../../images/DSC00338.jpg');
+		// background-position: center center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+
+		// border-radius: 5% 5px 5px 5px;
+		// margin: 20px;
+
+		// min-width: 400px;
+		// max-width: 400px;
+		// min-height: 500px;
+		// max-height: 500px;
+	// }
+
+	.highlight {
+		--mainColor: #ff9800;
+
+		font-family: 'Righteous',helvetica,sans-serif;
+		font-size: 1.1em;
+		// background: #ff9800;
+		background: linear-gradient(
+			var(--mainColor) 0%,
+			var(--mainColor) 100%
+		);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0px;
+		text-decoration: none;
+		transition: background-size .3s;
+		
+		&:hover {
+			color: black;
+			background-size: 4px 50px;
 		}
 	}
