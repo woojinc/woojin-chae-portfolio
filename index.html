@@ -28,7 +28,7 @@
 		lightSchemeIcon = document.querySelector('link#light-icon');
 		darkSchemeIcon = document.querySelector('link#dark-icon');
 
-		function onUpdate() {
+		onUpdate = () => {
 			if (matcher.matches) {
 				lightSchemeIcon.remove();
 				document.head.append(darkSchemeIcon);
