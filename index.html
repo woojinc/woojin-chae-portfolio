@@ -17,6 +17,27 @@
 		href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="icon" type="image/png" sizes="16x16" id="light-icon" href="/images/wj.png">
+	<link rel="icon" type="image/png" sizes="16x16" id="dark-icon" href="/images/wj_darkmode.png">
+
+	<script>
+		matcher = window.matchMedia('(prefers-color-scheme: dark)');
+		matcher.addListener(onUpdate);
+		onUpdate();
+
+		lightSchemeIcon = document.querySelector('link#light-icon');
+		darkSchemeIcon = document.querySelector('link#dark-icon');
+
+		function onUpdate() {
+			if (matcher.matches) {
+				lightSchemeIcon.remove();
+				document.head.append(darkSchemeIcon);
+			} else {
+				document.head.append(lightSchemeIcon);
+				darkSchemeIcon.remove();
+			}
+		}
+	</script>
 </head>
 
 <body class="landing is-preload">
@@ -199,7 +220,7 @@
 			<div class="inner">
 				<div class="icons major skills-interested">
 					<header class="major">
-						<h2>Skills that I'm interested</h2>
+						<h2>Skills that I'm interested in</h2>
 					</header>
 					<i class="devicon-python-plain-wordmark"></i>
 					<i class="devicon-java-plain"></i>
